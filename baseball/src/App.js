@@ -1,28 +1,19 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./css/App.scss";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import BatStats from "./components/BatStats";
+import StatButtons from "./components/StatButtons";
+
+function App(props) {
+  const ballState = useState(0);
+  const strikeState = useState(0);
+
+  return (
+    <div className="App">
+      <BatStats balls={ballState[0]} strikes={strikeState[0]} />
+      <StatButtons ballState={ballState} strikeState={strikeState} />
+    </div>
+  );
 }
 
 export default App;
