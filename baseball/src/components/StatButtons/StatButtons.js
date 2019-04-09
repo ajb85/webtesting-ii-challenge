@@ -14,7 +14,6 @@ function StatButtons({ ballState, strikeState }) {
   };
 
   const countStrike = () => {
-    // if strikes < 2 (strike+1) else endBatter()
     strikes < 2 ? setStrikes(strikes + 1) : endBatter();
   };
 

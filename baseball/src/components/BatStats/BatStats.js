@@ -5,11 +5,11 @@ function BatStats({ balls, strikes }) {
     <section>
       <div>
         <label>Strikes:</label>
-        <span>{strikes}</span>
+        <span role="strikes">{strikes}</span>
       </div>
       <div>
         <label>Balls:</label>
-        <span>{balls}</span>
+        <span role="balls">{balls}</span>
       </div>
     </section>
   );
